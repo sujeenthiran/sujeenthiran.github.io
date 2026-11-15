@@ -1,4 +1,4 @@
-# Portfolio – Sujeenthiran Naveendran
+<p align="center"><img src="docs/banner.svg" alt="Portfolio – Sujeenthiran Naveendran" width="100%"></p>
 
 Mon portfolio en ligne : **https://sujeenthiran.github.io**
 
