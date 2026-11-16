@@ -185,6 +185,28 @@
       <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">API REST</span><span class="tag">ntopng</span><span class="tag">pfSense API</span></div>
     </div>
     <div class="project">
+      <div class="top"><h3>CYBER AUDIT – audit de sécurité automatique</h3><span class="status">2026 · open source</span></div>
+      <ul>
+        <li>On donne une IP ou un réseau : découverte des machines et des services avec Nmap, contrôles web et TLS</li>
+        <li>Chaque version détectée est croisée avec la NVD (CVE), le catalogue CISA KEV (failles exploitées) et le score EPSS</li>
+        <li>Rapport PDF noté de A à F avec plan d'action ; synthèse rédigée par une IA locale (Ollama) si disponible</li>
+        <li>Installation en une commande avec Docker, tests automatiques sur GitHub Actions ; utilisé pour auditer mon propre réseau</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Nmap</span><span class="tag">CVE / KEV / EPSS</span><span class="tag">Docker</span></div>
+      <p style="margin-top:12px"><a href="https://github.com/sujeenthiran/cyber-audit" target="_blank" rel="noopener">Voir le code sur GitHub ↗</a></p>
+    </div>
+    <div class="project">
+      <div class="top"><h3>« Mes infos ont fuité ? » – outil de vérification des fuites</h3><span class="status">2026 · open source</span></div>
+      <ul>
+        <li>Outil grand public : on tape son e-mail et il liste les fuites de données connues, avec une note de A à E</li>
+        <li>Explique en français simple chaque donnée volée et génère un plan d'action personnalisé (mots de passe, 2FA, arnaques par SMS…)</li>
+        <li>Test de mot de passe par k-anonymat : l'empreinte SHA-1 est calculée dans le navigateur, seuls 5 caractères partent sur Internet</li>
+        <li>Un double-clic pour le lancer sur Windows, macOS ou Linux, sans dépendance ; serveur local protégé contre le CSRF et le DNS rebinding</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">OSINT</span><span class="tag">k-anonymat</span><span class="tag">Vie privée</span></div>
+      <p style="margin-top:12px"><a href="https://github.com/sujeenthiran/mes-infos-ont-fuite" target="_blank" rel="noopener">Voir le code sur GitHub ↗</a></p>
+    </div>
+    <div class="project">
       <div class="top"><h3>Cloud familial et services auto-hébergés</h3><span class="status">2026 · en production</span></div>
       <ul>
         <li>Nextcloud sous Docker (MariaDB, Redis, tâches cron) sur un disque dédié, avec un compte séparé pour chaque membre de la famille</li>
