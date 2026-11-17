@@ -94,6 +94,9 @@
   @media (max-width:760px) { .stats { grid-template-columns:1fr; } }
   .diagram { background:var(--bg2); border:1px solid var(--line); border-radius:12px; padding:16px; margin:4px 0 16px; }
   .diagram svg { width:100%; height:auto; display:block; }
+.cai { display:grid; grid-template-columns:220px 1fr; gap:22px; align-items:start; margin-bottom:6px; }
+.cai img { width:100%; border-radius:12px; border:1px solid var(--line); display:block; }
+@media (max-width:640px) { .cai { grid-template-columns:1fr; } .cai img { max-width:260px; margin:0 auto; } }
 </style>
 </head>
 <body>
@@ -135,11 +138,11 @@
   <h2><span class="num">02.</span>Compétences</h2>
   <div class="skills">
     <div class="card"><h3>Sécurité offensive</h3><div class="tags"><span class="tag">Kali Linux</span><span class="tag">Metasploit</span><span class="tag">Burp Suite</span><span class="tag">Nmap</span></div></div>
-    <div class="card"><h3>Analyse et défense</h3><div class="tags"><span class="tag">Wireshark</span><span class="tag">ntopng</span><span class="tag">CrowdSec</span><span class="tag">pfBlockerNG</span><span class="tag">Analyse de vulnérabilités</span><span class="tag">Durcissement</span><span class="tag">Gestion d'incidents</span></div></div>
+    <div class="card"><h3>Analyse et défense</h3><div class="tags"><span class="tag">Wireshark</span><span class="tag">ntopng</span><span class="tag">CrowdSec</span><span class="tag">pfBlockerNG</span><span class="tag">Analyse de vulnérabilités</span><span class="tag">Durcissement</span><span class="tag">Gestion d'incidents</span><span class="tag">Supervision (Uptime Kuma)</span></div></div>
     <div class="card"><h3>Gouvernance</h3><div class="tags"><span class="tag">Politique de sécurité</span><span class="tag">Analyse de risques</span></div></div>
     <div class="card"><h3>Réseaux</h3><div class="tags"><span class="tag">TCP/IP</span><span class="tag">pfSense</span><span class="tag">Tailscale / WireGuard</span><span class="tag">OpenVPN</span><span class="tag">NAT</span><span class="tag">DHCP</span><span class="tag">DNS</span><span class="tag">QoS</span><span class="tag">Reverse proxy</span><span class="tag">PXE</span><span class="tag">Segmentation</span></div></div>
     <div class="card"><h3>Systèmes et virtualisation</h3><div class="tags"><span class="tag">Active Directory</span><span class="tag">Windows Server</span><span class="tag">Debian</span><span class="tag">Rocky Linux</span><span class="tag">VMware ESXi</span><span class="tag">VMware Workstation</span><span class="tag">Hyper-V</span><span class="tag">Docker / Compose</span><span class="tag">Nextcloud</span><span class="tag">Caddy</span></div></div>
-    <div class="card"><h3>Développement et bases de données</h3><div class="tags"><span class="tag">Python (FastAPI)</span><span class="tag">API REST</span><span class="tag">Bash</span><span class="tag">PowerShell</span><span class="tag">MySQL / MariaDB</span><span class="tag">PostgreSQL</span><span class="tag">Git</span></div></div>
+    <div class="card"><h3>Développement et bases de données</h3><div class="tags"><span class="tag">Python (FastAPI)</span><span class="tag">React / TypeScript</span><span class="tag">IA locale (Ollama)</span><span class="tag">API REST</span><span class="tag">Bash</span><span class="tag">PowerShell</span><span class="tag">MySQL / MariaDB</span><span class="tag">PostgreSQL</span><span class="tag">Git</span></div></div>
   </div>
 </div></section>
 
@@ -207,13 +210,28 @@
       <p style="margin-top:12px"><a href="https://github.com/sujeenthiran/mes-infos-ont-fuite" target="_blank" rel="noopener">Voir le code sur GitHub ↗</a></p>
     </div>
     <div class="project">
-      <div class="top"><h3>Cloud familial et services auto-hébergés</h3><span class="status">2026 · en production</span></div>
+      <div class="top"><h3>CYBER AI – assistant IA de cybersécurité 100 % local</h3><span class="status">2026 · V1</span></div>
+      <div class="cai">
+        <img src="img/cyber-ai.jpg" alt="Avatar holographique 3D de CYBER AI" loading="lazy">
+        <ul>
+          <li>Assistant vocal qui tourne entièrement sur le PC : aucune donnée envoyée dans le cloud</li>
+          <li>Avatar holographique 3D animé (Three.js / React Three Fiber) : regard, expressions, lèvres synchronisées sur la voix</li>
+          <li>IA locale avec Ollama, reconnaissance vocale Whisper et voix française Piper ; mémoire locale avec recherche vectorielle</li>
+          <li>« Cyber Lab » : analyse statique de fichiers suspects, analyse de journaux (SSH, Windows, web, pfSense), Nmap sur cibles autorisées</li>
+          <li>Sécurité dès la conception : serveur limité à 127.0.0.1 avec jeton de session, dossiers et cibles autorisés, validation obligatoire avant toute action, commandes destructrices toujours bloquées, protection contre l'injection de prompt</li>
+        </ul>
+      </div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React / TypeScript</span><span class="tag">Three.js</span><span class="tag">Ollama</span><span class="tag">Whisper</span><span class="tag">IA locale</span></div>
+    </div>
+    <div class="project">
+      <div class="top"><h3>Cloud familial, supervision et services auto-hébergés</h3><span class="status">2026 · en production</span></div>
       <ul>
         <li>Nextcloud sous Docker (MariaDB, Redis, tâches cron) sur un disque dédié, avec un compte séparé pour chaque membre de la famille</li>
         <li>Accès depuis l'extérieur en HTTPS, uniquement à travers le VPN : aucun service exposé sur Internet</li>
         <li>Page d'accueil Homepage et reverse proxy Caddy avec des noms de domaine locaux servis par le DNS de pfSense</li>
+        <li>Supervision avec Uptime Kuma : pare-feu, accès Internet, DNS, cloud et tableau de bord surveillés chaque minute, alerte instantanée sur mon téléphone (ntfy) en cas de panne</li>
       </ul>
-      <div class="tags"><span class="tag">Nextcloud</span><span class="tag">Docker Compose</span><span class="tag">MariaDB</span><span class="tag">Redis</span><span class="tag">Caddy</span></div>
+      <div class="tags"><span class="tag">Nextcloud</span><span class="tag">Docker Compose</span><span class="tag">MariaDB</span><span class="tag">Redis</span><span class="tag">Caddy</span><span class="tag">Uptime Kuma</span><span class="tag">ntfy</span></div>
     </div>
     <div class="project">
       <div class="top"><h3>Audit de sécurité de mon homelab avec Kali</h3><span class="status">2026</span></div>
